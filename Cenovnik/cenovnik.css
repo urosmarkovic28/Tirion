@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headings{
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    flex-direction: column;
+    top: 200px;
+   
+}
+
+p a{
+    text-decoration: none;
+    color: crimson;
+}
+table tr td{
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+}
+.content-heading{
+    font-size: 20px;
+}
+.dnevni-trening h3{
+    padding-bottom: 50px;
+}
+.teretana-cardio h3{
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.vodjeni-treninzi h3{
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.sve{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.content-container{
+    min-height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #474747;
+    padding-top: 20px;
+}
+#naslov{
+    font-size: 25px;
+  
+}
+#naslov span{
+    color: crimson;
+}
+.text{
+    width: fit-content;
+    padding-right: 400px;
+    text-align: center;
+    font-size: 15px;
+ 
+}
+.cena_dnevni{
+    padding-left: 450px;
+    font-size: 15px;
+    text-align: left;
+    padding-top: 25px;
+}
+.cena #malo{
+    text-align: left;
+}
+#malo p{
+    color: crimson;
+    text-align: left;
+}
+.nepar{
+    background-color: rgb(88, 88, 88);
+    color: white;
+    width: 100%;
+}
+
+
+.cena_vodjeni{
+    padding-left: 450px;
+    font-size: 15px;
+    text-align: left;
+    padding-top: 25px;
+}
+.cena_cardio{
+    padding-left: 450px;
+    font-size: 15px;
+    text-align: left;
+    padding-top: 25px;
+}
+.cena_sve{
+    padding-left: 150px;
+    font-size: 15px;
+    text-align: left;
+    width: fit-content;
+    padding-top: 25px;
+}
+#footer{
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    width: 100%;
+}
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+#footer h2{
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#footer .list{
+    display: flex;
+    margin-bottom: 30px;
+    flex-direction: row;
+}
+#footer p{
+    color: white;
+}
+#footer .contact{
+    display: flex;
+    padding: 20px;
+    flex-basis: 1;
+}
+#footer .contact .adress{
+    font-size: 15px;
+    padding-right: 20px;
+}
+#footer .radno_vreme{
+    font-size: 15px;
+    padding: 50px;
+    position: relative;
+    left: 150px;
+    flex-basis: 1;
+}
+#footer .radno_vreme p{
+    padding-bottom: 50px;
+}
+.navbar{
+    width: 300px;
+    height: 100%;
+    background-color: #262626;
+    opacity: 80%;
+    position:fixed ;
+     top : 0 ;  
+     right: -400px; /*ovo pomera ceo onaj meni van sajta i onda posle cu da ubacim da na klik ga stavi na plus 400 */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20% 0 0 60%;         /*gornji levi ugao za 20 posto gore desno i dole desno 0, i dole levo 60% ,  */
+    transition: 1s cubic-bezier(1,0,0,1); /*ova funkcija cubic pravi onu foru da brzo ulazi na pocetku a na kraju sporo i da izlazi prvo sporo pa onda brzo */
+    
+    }
+    .promeni{
+        right: 0; /*ovo ce prikaze meni sa desne strane na klik znaci nece vise da bude -400 kao gore nego 0 sa desne strane */
+    
+    }
+    
+    
+    .hamburger-menu {
+       width: 35px;
+       height: 30px;
+       
+       position: fixed;
+       top : 50px ; 
+       right: 60px ;
+       cursor: pointer; /* kad dodje kursor preko ovog hamburger menija on se pretvori iz strelice u prst */
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+    
+    }
+    .line {
+    width: 100%;
+    height: 3px;
+    background-color: chocolate;
+    transition: all 0.8s;
+    }
+     .promeni .line1 {
+    
+        transform : rotateZ(-45deg) translate(-8px, 6px) ; /*rotira prvu lilniju  na hamburgeru za 45% */ 
+    
+    }
+     .promeni .line2{
+        opacity: 0;
+    }
+     .promeni .line3{
+        transform : rotate(45deg) translate(-8px,-6px) ; 
+    }
+    /*ovo line 1 2 i 3 je naprailo x i sad treba pomocu java scripta da uradim da kad pritisnim da se pojavi to x a kad pritinskem x izadje hamburger meni */
+    
+    
+    
+    
+    .nav-list {
+    text-align: right;
+    
+    }
+    .nav-item {
+    list-style: none; 
+    margin: 25px ;
+    
+    }
+    .nav-link{
+    text-decoration: none;
+    font-size: 22px;
+    color:#eee ;
+    letter-spacing:1px ;
+    font-weight: 300;
+    text-transform: uppercase;
+    position: relative;
+    padding: 3px 0;
+    }
+    
+    .nav-link::before,.nav-link::after {
+    content: "";
+    width: 100%;
+    height: 2px; 
+    background-color: chocolate;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition:  transform 0.5s;
+    }
+    .nav-link::after{
+        bottom: 0;
+        transform-origin: right;
+        
+    }.nav-link::before{
+        top:0 ; 
+        transform-origin: left; 
+    }
+    .nav-link:hover::before,.nav-link:hover::after {
+        transform: scaleX(1);  /* ovo da proverim ponovo ali ovo je hover da one linije prolaze pored slova kada  predjemo misem preko*/
+         /*ovo da pogledam ponovo kad zavrsim sve za ove linije za hover */ 
+    }
+
+@media (max-width: 1000px){
+    .text{
+        width: fit-content;
+        padding-right: 300px;
+        text-align: center;
+        font-size: 15px;
+     
+    }
+}  
+@media (max-width: 900px){
+    .text{
+        width: fit-content;
+        padding-right: 250px;
+        text-align: center;
+        font-size: 15px;
+     
+    }
+}  
+@media (max-width: 820px){
+    .text{
+        width: fit-content;
+        padding-right: 200px;
+        text-align: center;
+        font-size: 15px;
+     
+    }
+}  
+@media (max-width: 769px){
+    .text{
+        width: fit-content;
+        padding-right: 100px;
+        text-align: center;
+        font-size: 15px;
+     
+    }
+}  
+@media (max-width: 650px){
+    .cena_dnevni{
+        padding-left: 250px;
+        font-size: 15px;
+        text-align: left;
+        padding-top: 25px;
+   }
+   #cenovnik-teretana-cardio{
+       padding-left: 250px;
+   }
+   tr{
+    padding-left: 250px;
+    }
+}
+@media (max-width: 426px){
+    .cena_dnevni{
+        padding-left: 150px;
+        font-size: 15px;
+        text-align: left;
+        padding-top: 25px;
+   }
+   .dnevni-trening .content-heading h3{
+    position: relative;
+    left: 120px;
+   }
+   #cenovnik-teretana-cardio{
+       position: relative;
+       left: -125px;
+   }
+   #cenovnik-teretana-cardio .nepar .cena_cardio{
+       padding-left: 150px;
+   }
+   #cenovnik-teretana-cardio .par .cena_cardio{
+    padding-left: 150px;
+    font-size: 15px;
+    text-align: left;
+    padding-top: 25px;
+   } 
+   .teretana-cardio .content-heading h3{
+       position: relative;
+       left: 200px;
+   }
+   #cenovnik-vodjeni-trening .nepar .cena_vodjeni{
+       padding-left: 150px;
+   }
+   #cenovnik-vodjeni-trening .par .cena_vodjeni{
+    padding-left: 150px;
+    font-size: 15px;
+    text-align: left;
+    padding-top: 25px;
+   }
+   .vodjeni-treninzi .content-heading h3{
+       position: relative;
+       left: 100px;
+   }
+   #cenovnik-sve .nepar .cena_sve{
+       padding-left: 70px;
+       font-size: 12px;
+   }
+   #cenovnik-sve .nepar .text{
+       padding-left: 50px;
+       font-size: 12px;
+   }
+   #cenovnik-sve .par .text{
+    padding-left: 50px;
+    font-size: 12px;
+}
+   #cenovnik-sve .par .cena_sve{
+    padding-left: 70px;
+    font-size: 12px;
+    text-align: left;
+    padding-top: 25px;
+}
+   .sve .content-heading h3{
+       font-size: 15px;
+       position: relative;
+       left: 100px;
+       margin-bottom: 50px;
+
+   }
+ 
+}
+@media (max-width: 321px){
+    .cena_dnevni{
+        padding-left: 50px;
+        font-size: 15px;
+        text-align: left;
+        padding-top: 25px;
+   }
+   .dnevni-trening .content-heading h3{
+    position: relative;
+    left: 50px;
+   }
+   #cenovnik-teretana-cardio .nepar .cena_cardio{
+    padding-left: 100px;
+   }
+   #cenovnik-teretana-cardio .par .cena_cardio{
+    padding-left: 100px;
+    font-size: 15px;
+    text-align: left;
+    padding-top: 25px;
+   }
+   .teretana-cardio .content-heading h3{
+    position: relative;
+    left: 150px;
+    }
+    #cenovnik-vodjeni-trening .nepar .cena_vodjeni{
+        padding-left: 40px;
+    }
+    #cenovnik-vodjeni-trening .par .cena_vodjeni{
+     padding-left: 40px;
+     font-size: 15px;
+     text-align: left;
+     padding-top: 25px;
+    }
+    .vodjeni-treninzi .content-heading h3{
+        position: relative;
+        left: 50px;
+    }
+    #cenovnik-sve .nepar .cena_sve{
+        padding-left: 0px;
+        font-size: 12px;
+    }
+    #cenovnik-sve .nepar .text{
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 12px;
+    }
+    #cenovnik-sve .par .text{
+     padding-left: 0px;
+     font-size: 12px;
+     padding-right: 0;
+ }
+    #cenovnik-sve .par .cena_sve{
+     padding-left: 0px;
+     font-size: 12px;
+     text-align: left;
+     padding-top: 25px;
+ }
+    .sve .content-heading h3{
+        font-size: 13px;
+        position: relative;
+        left: 50px;
+        margin-bottom: 50px;
+ 
+    }
+}
+@media (max-width: 376px){
+    .sve .content-heading h3{
+        position: relative;
+        left: 20px;
+        margin-bottom: 50px;
+    }
+}
+    

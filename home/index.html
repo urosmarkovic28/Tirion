@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta charset="utf-8">
+     <title> HOME stranica</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        
+    
+       
+       
+       
+
+         <div class="slajd1">
+          
+            
+
+          <div class="slajd1-slika">
+        
+            <div class="text-box">
+                
+                <div class="logo">
+                    <a href="index.html"><img class="phot" src="images/tirion.png" alt=""></a>
+                </div>
+                <h1>Lični trener </h1>
+                <span></span>
+                <p>Naši treneri prate napredak kod svakog klijenta i savetuju ga kako da prevaziđe i najteže probleme.</p>
+
+             </div>
+        </div>
+
+      
+        
+    </div>
+            
+          <div class="slajd2">
+            
+            <div class="slajd2-slika">
+            <div class="text-box">
+                <div class="logo">
+                    <a href="index.html"><img class="phot" src="images/tirion.png" alt=""></a>
+                </div>
+                <h2>Zdravlje</h2>
+                <span></span>
+                <p>Zdravlje nam je na prvom mestu. Veoma nam je važno fizičko stanje i kondicija svakog klijenta.</p>
+            </div>
+        </div>
+        </div>
+
+             <div class="slajd3">
+               
+                <div class="slajd3-slika">
+            <div class="text-box">
+                <div class="logo">
+                    <a href="index.html"><img class="phot" src="images/tirion.png" alt=""></a>
+                </div>
+                <h1>Nova oprema </h1>
+                <span></span>
+                <p>Naše teretane su opremljene potpuno novom i savremenom opremom. Sve informacije o spravama dobićete od našeg tima.</p>
+            </div>
+        </div>
+        </div>
+        <div class="slajd4">
+          
+            <div class="slajd4-slika">
+            <div class="text-box">
+                <div class="logo">
+                    <a href="index.html"><img class="phot" src="images/tirion.png" alt=""></a>
+                </div>
+                <h1>Posvećenost</h1>
+                <span></span>
+                <p>Naši instruktori su posvećeni, kvalifikovani i obučeni za sve vrste treninga. Naš tim će vam pomoći da ispunite sve ciljeve koje ste odredili.</p>
+            </div>
+        </div>
+        </div>
+
+        
+
+
+           <nav class="navbar">
+                 <div class="hamburger-menu">
+                    <div class ="line line1"></div>
+                    <div class ="line line2"></div>
+                    <div class ="line line3"></div>
+                 </div>
+               
+                  <ul class="nav-list">
+                         
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a href="../Raspored/raspored.html" class="nav-link">Raspored</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a href="../Cenovnik/cenovnik.html" class="nav-link">Cenovnik</a>
+                    </li>  
+                   
+                   <li class="nav-item">
+                        <a href="../Zakazi trening/zakazi.html" class="nav-link">Zakaži trening</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a href="../kontakt/kontakt.html" class="nav-link">Kontakt</a>
+                    </li>  
+                    <li class="nav-item"  >
+                        <h3 onclick="prikaziBMI()">BMi</h3>
+                    </li>  
+
+                  </ul>  
+
+           </nav>
+         
+ 
+
+           <div class="header">
+            <div class="inner-header">
+
+                <div class="logo-container">
+                     <a href="https://www.facebook.com/"> <img class="pic" src="images/facebook.png" alt=""></a>
+                    <a href="https://www.instagram.com/"> <img class="pic" src="images/instagram.png" alt=""></a>
+                    <a href="https://www.youtube.com/?hl=sr&gl=RS"> <img class="pic" src="images/33333333.png" alt=""></a>
+                                
+                </div>
+
+                <ul class="lista">
+                    <a class="meni1" href="index.html"><li><b>HOME</b></li></a>
+                    <a class="meni1"href="../Raspored/raspored.html"><li>RASPORED</li></a>
+                    <a class="meni1"href="../Cenovnik/cenovnik.html"><li>CENOVNIK</li></a>
+                    
+                    <a class="meni1"href="../Zakazi trening/zakazi.html"><li>ZAKAŽI TRENING</li></a>
+                    <a class="meni1"href="../kontakt/kontakt.html"><li>KONTAKT</li></a>
+                    <h3 class="meni1" onclick="prikaziBMI()" >BMI</h3> 
+
+
+
+
+                </ul>
+            </div>
+
+          </div>
+
+
+          <div class="vreme-container">
+
+            <div class="location">
+               <b> <p id="lokacija">Los Angeles</p></b>
+            </div>
+    
+            <div class="ikona">
+                <img id="ikona-temperature"src="http://openweathermap.org/img/wn/02n@2x.png" alt="">
+            </div>
+    
+            <div class="temperatura">
+                <b>  <p><span id="vrednost-temperature">25</span><span id="stepeni">&#176 C</span></p></b>
+            </div>
+    
+            <div class="opis-vremena">
+                <b>   <p id="kako-je-napolju">Suncano</p></b>
+            </div>
+    
+    
+    
+    
+         </div> 
+
+
+<!--          odavde BMI               -->
+
+
+         <div class="bmi-container">
+
+            <h2 id="naslov">BMI calculator</h2>
+   
+            <h3>Visina:</h3>
+   
+            <input type="text" id="input-visina" required>
+            
+            <h3>Tezina:</h3>
+   
+            <input type="text" id="input-tezina" required>
+   
+            <p id="rezultat"></p>
+   
+            <button  class="dugme" id="izracunaj">Izracunaj</button>
+   
+            <p id="info">unesi visinu u cm i tezinu u kg </p>
+        
+            <button type="reset" class="dugme" id="obrisi">Obrisi</button>
+           
+   
+   
+   
+   
+       </div>
+
+
+    
+
+
+
+
+        <script src ="script.js" ></script>
+    </body>
+</html>

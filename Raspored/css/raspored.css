@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+/*main*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/background.jpeg);
+    background-size: cover;
+}
+section .leftBox{
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 50px;
+    box-sizing: border-box;
+}
+section .leftBox .content{
+    color: white;
+    background: rgba(0, 0, 0, .5);
+    padding: 40px;
+    transition: .5s;
+}
+section .leftBox .content:hover{
+    background: #e91e63;
+}
+section .leftBox .content h1{
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    text-transform: uppercase;    
+}
+section .leftBox .content p{
+    margin: 10px 0 0;
+    padding: 0;
+}
+section .events{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    float: right;
+    box-sizing: border-box;
+}
+section .events ul{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 40px;
+    box-sizing: border-box;
+}
+section .events ul li{
+    list-style: none;
+    background: #ffffff;
+    box-sizing: border-box;
+    height: 200px;
+    width: 200px;
+}
+section .events ul li .time{
+    position: relative;
+    padding: 20px;
+    background: #262626;
+    box-sizing: border-box;
+    width: 30%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    transition: .5s;
+}
+section .events ul li:hover .time{
+    background: #e91e63;
+}
+section .events ul li .time h2{
+    writing-mode: vertical-rl;
+    position: absolute;
+    left: -25px;
+    top: 35px;
+    font-size: 40px;
+    color: #ffffff;
+    line-height: 30px;
+}
+section .events ul li .details{
+    padding: 20px;
+    background: #3b3b3b;
+    box-sizing: border-box;
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+section .events ul li .details h3{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color: #e91e63;
+    font-size: 22px;
+}
+section .events ul li .details p{
+    position: relative;
+    margin: 10px 0 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 14px;
+}
+section .events ul li .details a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border: 2px solid #e91e63;
+    margin-top: 15px;
+    position: relative;
+    color: #ffffff;
+    left: -10px;
+    font-size: 18px;
+    transition: .5s;
+    width: fit-content;
+}
+section .events ul li .details a:hover{
+    background-color: #e91e63;
+    color: #ffffff;
+    border-color: #e91e63;
+}
+/*End main*/
+/*nav*/
+.navbar{
+    width: 300px;
+    height: 100%;
+    background-color: #262626;
+    opacity: 80%;
+    position:fixed ;
+     top : 0 ;  
+     right: -400px; /*ovo pomera ceo onaj meni van sajta i onda posle cu da ubacim da na klik ga stavi na plus 400 */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20% 0 0 60%;         /*gornji levi ugao za 20 posto gore desno i dole desno 0, i dole levo 60% ,  */
+    transition: 1s cubic-bezier(1,0,0,1); /*ova funkcija cubic pravi onu foru da brzo ulazi na pocetku a na kraju sporo i da izlazi prvo sporo pa onda brzo */
+    
+    }
+    .promeni{
+        right: 0; /*ovo ce prikaze meni sa desne strane na klik znaci nece vise da bude -400 kao gore nego 0 sa desne strane */
+    
+    }
+    
+    
+    .hamburger-menu {
+       width: 35px;
+       height: 30px;
+       
+       position: fixed;
+       top : 50px ; 
+       right: 50px ;
+       cursor: pointer; /* kad dodje kursor preko ovog hamburger menija on se pretvori iz strelice u prst */
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+    
+    }
+    .line {
+    width: 100%;
+    height: 3px;
+    background-color: chocolate;
+    transition: all 0.8s;
+    }
+     .promeni .line1 {
+    
+        transform : rotateZ(-45deg) translate(-8px, 6px) ; /*rotira prvu lilniju  na hamburgeru za 45% */ 
+    
+    }
+     .promeni .line2{
+        opacity: 0;
+    }
+     .promeni .line3{
+        transform : rotate(45deg) translate(-8px,-6px) ; 
+    }
+    /*ovo line 1 2 i 3 je naprailo x i sad treba pomocu java scripta da uradim da kad pritisnim da se pojavi to x a kad pritinskem x izadje hamburger meni */
+    
+    
+    
+    
+    .nav-list {
+    text-align: right;
+    
+    }
+    .nav-item {
+    list-style: none; 
+    margin: 25px ;
+    
+    }
+    .nav-link{
+    text-decoration: none;
+    font-size: 22px;
+    color:#eee ;
+    letter-spacing:1px ;
+    font-weight: 300;
+    text-transform: uppercase;
+    position: relative;
+    padding: 3px 0;
+    }
+    
+    .nav-link::before,.nav-link::after {
+    content: "";
+    width: 100%;
+    height: 2px; 
+    background-color: chocolate;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition:  transform 0.5s;
+    }
+    .nav-link::after{
+        bottom: 0;
+        transform-origin: right;
+        
+    }.nav-link::before{
+        top:0 ; 
+        transform-origin: left; 
+    }
+    .nav-link:hover::before,.nav-link:hover::after {
+        transform: scaleX(1);  /* ovo da proverim ponovo ali ovo je hover da one linije prolaze pored slova kada  predjemo misem preko*/
+         /*ovo da pogledam ponovo kad zavrsim sve za ove linije za hover */ 
+    }
+
+/*end nav*/
+
+/*Responsive*/
+@media (max-width: 991px){
+    section{
+       
+        height: 100%;
+        background-position: center;
+    }
+    section .leftBox{
+        width: 100%;
+        height: auto;
+        float: none;
+        padding: 20px;
+    }
+    section .events{
+        width: 100%;
+        height: auto;
+        background: transparent;
+        float: none;
+        box-sizing: border-box;
+    }
+    section .events ul{
+        position: relative;
+        transform: translateY(0px);
+        padding: 0 20px 20px;
+    }
+    section .events ul li{
+        width: 100%;
+        background-color: transparent;
+    }
+    section .events ul li .time h2{
+        position: relative;
+        left: 50px;
+    }
+    section .events ul li .details {
+        text-align: center;
+        justify-content: center;
+    }
+} 
+@media (max-width: 769px){
+    section .events ul li .details a{
+        position: relative;
+        left: 35%;
+    }
+}
+@media (max-width: 426px){
+    section .events ul li .time h2{
+        position: relative;
+        left: -20px;
+    }
+    section .events ul li .details a{
+        position: relative;
+        left: 40px;
+    }
+}
+@media (max-width: 376px){
+    section .events ul li .details a{
+        position: relative;
+        left: 20px;
+    }
+}
+@media (max-width: 321px){
+    section .events ul li .details a{
+        position: relative;
+        left: 0;
+
+    }
+}

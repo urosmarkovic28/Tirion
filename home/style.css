@@ -1,0 +1,810 @@
+* {
+
+   margin: 0;  /*na pocetku za sve  margin i padding 0 jer neki elementi imaju automatska podesavanja pa da postavim 0 da se posle ne cimam pojedinacno*/
+   padding: 0;
+   
+   
+   } /*heder prvi*/
+   .header{
+      
+   width: 100%;
+   height: 7vh;
+   display: block;
+   background: transparent;
+   position: absolute;
+   
+   
+   
+   }
+   .inner-header{
+   width: 93%;
+   height: 100%;
+   display: block;
+   margin: 0 auto;
+   background:transparent;
+   
+   }
+   .logo-container{
+   height: 100%;
+   float: left;
+   
+   }
+   .logo-container a img {
+      height: 100%;
+      padding: 5px;
+      height: 30px;
+   }
+   .logo-container a img:hover {
+      transition: 0.5s;
+      height: 35px;
+   }
+   .lista{
+      
+      float: right;
+      height: 100%;
+      list-style: none; 
+      
+   }
+   .lista .meni1 {
+      float: left;
+      height: 100%;
+      text-decoration: none; 
+   }
+   .lista .meni1 li {
+      color:  white;
+      height: 100%;
+      font-size: 20px;
+      /*margin: 20px 15px*/
+      padding: 1.5rem;
+      
+   }
+   .lista .meni1 li:hover{
+      color: chocolate ;
+      
+      transition: 0.5s;
+   }.lista h3{
+      color:  white;
+      height: 100%;
+      font-size: 20px;
+      padding: 1.5rem;
+   }.lista h3:hover{
+      color: palevioletred;
+   }
+   
+   /*do ovde je prvi meni onaj gornji na vrhu*/
+   .logo{
+     
+      width: 100px;
+      height: 120px;
+   
+     padding: 15px;
+     margin-bottom: 100px;
+     
+   }
+   .logo .phot{
+     
+      height: 120px;
+   
+   }.logo:hover{
+      transition: all 2s linear;
+      transform: rotateY(360deg);
+   
+   }
+   
+   body {
+       font-family: 'Dosis', sans-serif;
+       overflow: hidden;
+       width: 100%;
+       height: 100%;
+   }
+   
+   
+   
+   .slajd1,.slajd2,.slajd3,.slajd4 {
+   width: 100%;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
+   
+   }
+   
+   
+   .slajd1-slika,.slajd2-slika,.slajd3-slika,.slajd4-slika  {
+       
+       width: 130%;
+       height: 100vh;
+       background-image: url("images/gym.jpg");
+       background-size: cover;
+       background-repeat: no-repeat;
+      animation: zoom-out 10s linear infinite ;
+   }
+   .slajd1{
+   animation: slajdovanje1 40s linear infinite ;
+   
+   }
+   .slajd2{
+       animation: slajdovanje2 40s linear infinite ;
+       
+       }
+   .slajd3{
+      animation: slajdovanje3 40s linear infinite ;
+      
+      }
+   .slajd4{
+        animation: slajdovanje4 40s linear infinite ;
+        
+      }
+   
+      .slajd1-slika{
+         background-image: url("images/nike.jpg");
+      }
+      .slajd2-slika{
+         background-image: url("images/8.jpeg");
+      }
+      .slajd3-slika{
+         background-image: url("images/mora.jpg");
+      }
+      .slajd4-slika{
+         background-image: url("images/gym.jpg");
+      }
+   
+    @keyframes slajdovanje1 {
+      0%{
+         visibility: visible; 
+      }
+      25%{
+       visibility: hidden; 
+    }
+    50%{
+       visibility: hidden; 
+    }
+    75%{
+       visibility: hidden; 
+    }
+    100%{
+       visibility:visible ; 
+    }
+    }           
+    @keyframes slajdovanje2 {
+       0%{
+          visibility: hidden; 
+       }
+       25%{
+        visibility: hidden; 
+     }
+     50%{
+        visibility: visible; 
+     }
+     75%{
+        visibility: hidden; 
+     }
+     100%{
+        visibility: hidden; 
+     }
+     } 
+     @keyframes slajdovanje3 {
+       0%{
+          visibility: hidden; 
+       }
+       25%{
+        visibility: hidden; 
+     }
+     50%{
+        visibility: hidden; 
+     }
+     75%{
+        visibility: visible; 
+     }
+     100%{
+        visibility: hidden; 
+     }
+     } 
+     @keyframes slajdovanje4{
+       0%{
+          visibility: hidden; 
+       }
+       25%{
+        visibility: hidden; 
+     }
+     50%{
+        visibility: hidden; 
+     }
+     75%{
+        visibility: hidden; 
+     }
+     100%{
+        visibility: visible; 
+     }
+     } 
+    
+    
+   
+   @keyframes zoom-out{
+   100%{
+       width: 100%; /*stavili mso gore u img da je 120 posto slika uvecana i sad je ova animacija vraca na 100 posto i tako dobijamo onaj efekat kao da slika ulazi*/
+       
+   }
+   
+   
+   }
+   .text-box{
+    
+   width: 40vw;
+   position: absolute;
+   height: 30%;
+   top:10% ; 
+   left: 5% ;
+   color: #fff;
+   animation: povucigoretext 10s linear infinite ;
+   transform: translateY(200px) ; 
+   }
+   
+   .text-box h1{
+      margin-top:150px;
+       margin-bottom: 14px;
+      /* transition: transform ease-out 150ms;*/
+   }.text-box p{
+       margin-top: 25px;
+       font-size: 19px;
+       line-height: 18px;
+   }.text-box span{/*ovo je ova crvena linija */
+       background: red;
+       height: 1px;
+       width: 100px;
+       position: absolute;
+       left :0 ; 
+   
+   
+   }
+   @keyframes povucigoretext {
+    10%{
+      transform: translateY(0px) ; 
+   }
+   100%{
+      transform: translateY(0px);
+   }
+   
+   }
+   
+   
+   /*odavde meni 2 onaj sto ispada sa strane*/
+   
+   .navbar{
+      
+   width: 300px;
+   height: 100%;
+   background-color: #262626;
+   position:fixed ;
+    top : 0 ;  
+    right: -400px; /*ovo pomera ceo onaj meni van sajta i onda posle cu da ubacim da na klik ga stavi na plus 400 */
+   
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 20% 0 0 60%;         /*gornji levi ugao za 20 posto gore desno i dole desno 0, i dole levo 60% ,  */
+   transition: 1s cubic-bezier(1,0,0,1); /*ova funkcija cubic pravi onu foru da brzo ulazi na pocetku a na kraju sporo i da izlazi prvo sporo pa onda brzo */
+   
+   }
+   .promeni{
+       right: 0; /*ovo ce prikaze meni sa desne strane na klik znaci nece vise da bude -400 kao gore nego 0 sa desne strane */
+   
+   }
+   
+   
+   .hamburger-menu {
+      width: 35px;
+      height: 30px;
+      
+      position: fixed;
+      top : 5.75rem; 
+      right: 2rem ;
+      cursor: pointer; /* kad dodje kursor preko ovog hamburger menija on se pretvori iz strelice u prst */
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+   
+   }
+   .line {
+   width: 100%;
+   height: 3px;
+   background-color: chocolate;
+   transition: all 0.8s;
+   }
+    .promeni .line1 {
+   
+       transform : rotateZ(-45deg) translate(-8px, 6px) ; /*rotira prvu lilniju  na hamburgeru za 45% */ 
+   
+   }
+    .promeni .line2{
+       opacity: 0;
+   }
+    .promeni .line3{
+       transform : rotate(45deg) translate(-8px,-6px) ; 
+   }
+   /*ovo line 1 2 i 3 je naprailo x i sad treba pomocu java scripta da uradim da kad pritisnim da se pojavi to x a kad pritinskem x izadje hamburger meni */
+   
+   
+   
+   
+   .nav-list {
+   text-align: right;
+   
+   }
+   .nav-item {
+   list-style: none; 
+   margin: 25px ;
+   
+   }
+   .nav-item h3{
+      font-size: 22px;
+      letter-spacing: 1px;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: white;
+   }.nav-item h3:hover{
+      color: palevioletred;
+   }
+   .nav-link{
+   text-decoration: none;
+   font-size: 22px;
+   color:#eee ;
+   letter-spacing:1px ;
+   font-weight: 300;
+   text-transform: uppercase;
+   position: relative;
+   padding: 3px 0;
+   }
+   
+   .nav-link::before,.nav-link::after {
+   content: "";
+   width: 100%;
+   height: 2px; 
+   background-color: chocolate;
+   position: absolute;
+   left: 0;
+   transform: scaleX(0);
+   transition:  transform 0.5s;
+   }
+   .nav-link::after{
+       bottom: 0;
+       transform-origin: right;
+       
+   }.nav-link::before{
+       top:0 ; 
+       transform-origin: left; 
+   }
+   .nav-link:hover::before,.nav-link:hover::after {
+       transform: scaleX(1);  /* ovo da proverim ponovo ali ovo je hover da one linije prolaze pored slova kada  predjemo misem preko*/
+        /*ovo da pogledam ponovo kad zavrsim sve za ove linije za hover */ 
+   }
+   
+   
+   /*odavde vreme aplikacija*/
+   
+   
+   .vreme-container{
+      background: transparent;
+   border-radius: 50px;
+   
+   height: 20vh;
+   width: 15vw;
+   /*top:50% ;
+   left:50% ;
+   transform: translate(90%,90%);*/
+   bottom: 0px;
+   right: 10%;
+   position: fixed;
+   display: flex;
+   /*display: grid;
+   grid-template: "location"
+                 "ikona"
+                 "temperatura"
+                 "opis-vremena" ;            
+   
+   grid-template-rows: 25% 25% 25% 25%  ;*/
+   
+   /*background: linear-gradient(rgb(47,150,163),rgb(48,62,143));*/
+   color: white;
+   font-size: 16px;
+   /*box-shadow: ; */ /*prve dve vrednosti su debljina senke desno i dole onda sledeca je blur radius i zadnja je boja senke*/
+   /*a ako hocu i levo i gore da stavim senku onda stavim zarez i samo stavim minus da bi dobio evo i gore*/
+   }.location{
+      grid-area: location;
+      justify-self:center ;
+    
+      align-self:center ;
+   }
+   
+   .ikona{
+      grid-area: ikona;
+      justify-self:center ;
+     
+      align-self:center ;
+   }
+   
+   .temperatura{
+      grid-area: temperatura;
+      justify-self:center ;
+    
+      align-self:center ;
+   }
+   
+   .opis-vremena{
+      padding: 10px;
+      grid-area: opis-vremena;
+      justify-self:center ;
+      
+      align-self:center ;
+   }.vreme-container:hover{
+     /* background: linear-gradient(rgb(47,150,163),rgb(48,62,143));   */
+      color: purple;
+   }
+   
+   
+   
+   
+   @media (max-width: 960px){
+   
+    .hamburger-menu{
+      display: flex;
+   }
+   .lista{
+   display: none;
+   }
+   .slajd1,.slajd2,.slajd3,.slajd4{
+      width: 100%;
+   }
+   .slajd1-slika,.slajd2-slika,.slajd3-slika,.slajd4-slika {
+      width: 100%;
+   }
+   
+   .vreme-container{
+      font-size: 10px;
+      
+       left: 10%;
+    
+    }
+    .text-box{
+    
+      width: 40vw;
+      position: absolute;
+      height: 30%;
+      font-size: 10px;
+   }
+   .text-box h1{
+      margin-top:50px;
+       margin-bottom: 24px;
+      /* transition: transform ease-out 150ms;*/
+   }.text-box p{
+       margin-top: 15px;
+       font-size: 14px;
+       line-height: 18px;
+   
+   
+   
+   
+   }
+   .logo{
+   
+      width: 50px;
+      height: 60px;
+   
+     padding: 5px;
+     margin-bottom: 10px;
+     
+   }
+   .logo .phot{
+     
+      height: 40px;
+   
+   }
+   .logo-container a img {
+      height: 100%;
+      padding: 5px;
+      height: 15px;
+   }
+   
+   
+   
+   
+   
+   
+   
+   }
+   @media (max-width: 660px){
+      .hamburger-menu{
+         display: flex;
+      }
+      .lista{
+      display: none;
+      }
+      .slajd1,.slajd2,.slajd3,.slajd4{
+         width: 100%;
+      }
+      .slajd1-slika,.slajd2-slika,.slajd3-slika,.slajd4-slika {
+         width: 100%;
+      }
+      
+   
+      .vreme-container{
+        font-size: 9px;
+        
+         left: 10%;
+      
+      }
+      
+   
+   }
+   
+   
+   
+   @media (max-height:500px){
+     
+      .hamburger-menu{
+         display: flex;
+   
+      }
+      .lista{
+      display: none;
+      }
+      .slajd1,.slajd2,.slajd3,.slajd4{
+         height: 100%;
+         width: 100%;
+      }
+      .slajd1-slika,.slajd2-slika,.slajd3-slika,.slajd4-slika {
+        height: 100%;
+        width: 100%;
+      }
+      
+      .text-box{
+    
+         width: 40vw;
+         position: absolute;
+         height: 30%;
+         font-size: 10px;
+      }
+      .text-box h1{
+         margin-top:50px;
+          margin-bottom: 24px;
+         /* transition: transform ease-out 150ms;*/
+      }.text-box p{
+          margin-top: 15px;
+          font-size: 14px;
+          line-height: 18px;
+   
+   
+   
+   
+      }
+      .logo{
+     
+         width: 50px;
+         height: 60px;
+      
+        padding: 5px;
+        margin-bottom: 10px;
+        
+      }
+      .logo .phot{
+        
+         height: 40px;
+      
+      }
+      .logo-container a img {
+         height: 100%;
+         padding: 5px;
+         height: 15px;
+      }
+   
+   
+   .hamburger-menu {
+      width: 20px;
+      height: 25px;
+      
+      position: fixed;
+      top : 2rem; 
+      right: 2rem ;
+   
+   }
+   .vreme-container{
+      left: 10%;
+      font-size: 9px;
+      color:white
+   }
+   
+   }
+   
+   
+   
+   
+   @media (max-height:350px){
+     
+     
+      .slajd1,.slajd2,.slajd3,.slajd4{
+         height: 100%;
+         width: 100%;
+      }
+      .slajd1-slika,.slajd2-slika,.slajd3-slika,.slajd4-slika {
+        height: 100%;
+        width: 100%;
+      }
+      
+      
+   
+   .hamburger-menu {
+      width: 20px;
+      height: 25px;
+      
+      position: fixed;
+      top : 2rem; 
+      right: 2rem ;
+   
+   }
+   .vreme-container{
+      display: none;
+      left: 10%;
+      font-size: 9px;
+      
+   }
+   .navbar{
+      width: 200px;
+      
+   }
+   
+      .nav-item {
+      
+      margin: 20px ;
+      
+      }
+      .nav-link{
+      
+      font-size: 12px;
+      
+      }
+    .nav-item h3{
+      font-size:12px ;
+      
+   }
+   
+   
+   }
+   
+   
+   
+   
+   /*            odavde BMI        */
+   
+   
+   
+   
+   .bmi-container{
+      width: 20%;
+     position: absolute;
+     
+     /*ovo sve zajedno top left pa transform stavlja element u sami centar 
+     top i left 50% ce da stave gornji levi ugao elementa u sami centar ali sam  element nece biti u centru
+     zato koristimo i transform :translate koji ce pomeriti element levo za 50 i gore za 50% i 
+     time ce biti u centru.znaci tad ce biti centar od elementa u centru strane a ne levi gornji ugao u centru strane kao sto je bez koriscnja transforma*/
+     
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%); /*prva promenljiva pomera u desno po x osi od centra znaci ako hocemo levo mora minus
+      a ova druga pomera po y osi dole znaci ako hocemo gore moramo minus*/
+   
+   
+   
+      
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+       box-shadow: 1px 1px 20px #ee5255;  /*prva je debljina dole druga debljina levo 20px je blur koliki je i zadnje je boja*/
+      display: none;
+   }
+   #naslov{
+   font-size: 30px;
+   font-weight: 600;
+   
+   }
+   h3{
+      font-size: 20px;
+     
+   }
+   #input-visina,#input-tezina{
+   
+   color: #222f3e;
+   text-align: left;
+   font-size: 20px;
+   font-weight:200 ; 
+   border: none;
+   border-bottom:1px solid #341f97 ;
+   width: 200px;
+   outline: none; /*ovo skloni linije okolo kad se pritisne na input polje*/
+   
+   }
+   
+   
+   #rezultat{
+      color: red;
+      
+      }
+      .dugme{
+      font-family: inherit;
+      margin-top: 10px;
+      border: none;
+      width: 150px;
+      padding: 10px;
+      outline: none;
+      cursor: pointer;
+      border-radius: 30px;
+      }.dugme:hover{
+          box-shadow: 1px 1px 10px black;
+      }
+      #info{
+          font-family: inherit;
+          font-size: 12px;   
+      }
+   
+   
+   @media (min-width:1000px){
+      #input-visina:focus,#input-tezina:focus{
+          border-bottom: 3px solid red;
+          width: 300px;
+          transition: 0.5s;
+         /* display: initial; /*intital znaci da ga postavlja na default vrednost*/
+      }   
+   }@media (max-width:1000px){
+     
+      #input-visina,#input-tezina{
+          font-size: 12px;
+          width: 50%;
+          height: 40%;
+      }
+      .bmi-container{
+          width: 40%;
+          
+      } .dugme{
+     
+      margin-top: 5px;
+      
+      width: 100px;
+      padding: 5px;
+     
+   
+      }#naslov{
+          font-size: 20px;
+      }
+   }
+   @media (max-height:400px){
+      #input-visina,#input-tezina{
+          font-size: 12px;
+          width: 50%;
+        
+   }
+   .bmi-container{
+      width: 40%;
+      
+   } .dugme{
+   
+   margin-top: 0px;
+   
+   width: 100px;
+   padding: 0px;
+   
+   
+   }
+   #naslov{
+      padding: 0;
+     font-size: 20px;
+     padding: 0;
+     margin: 0;
+   
+   }h3{
+      font-size: 15px;
+     padding: 0;
+   margin: 0;
+   }
+   
+   
+   
+   }

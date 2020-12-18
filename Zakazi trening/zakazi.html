@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakaži Svoj Trening</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--JS-->
+    <script defer src="js/custom.js"></script>
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/02f99ac454.js" crossorigin="anonymous"></script>
+    <!--ikonica-->
+    <link rel="shortcut icon" type="image/x-icon" href="../trilion.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Zakaži svoj trening</h2>
+            <p>Polja koja su označena <sup>*</sup> su obavezna</p>
+        </div>
+        <form action="" class="form" id="form">
+            <div class="form-element">
+                <label for="username">Ime:<sup>*</sup></label>
+                <input type="text" placeholder="Unesite Vaše ime"  id="username">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small class="error-message">Greška</small>
+            </div>
+            <div class="form-element">
+                <label for="prezime">Prezime:<sup>*</sup></label>
+                <input type="text" placeholder="Unesite Vaše prezime" id="prezime">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small class="error-message">Greška</small>
+            </div>
+            <div class="form-element">
+                <label for="email">E-mail:<sup>*</sup></label>
+                <input type="email" placeholder="Unesite Vaš email"  id="email">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small class="error-message">Greška</small>
+            </div>
+            
+            <div class="form-element">
+                <label for="broj-telefona">Broj telefona:<sup>*</sup></label>
+                <input type="text" placeholder="Unesite Vaš broj telefona"  id="brojTelefona">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small class="error-message">Greška</small>
+            </div>
+            <button>Pošalji</button>
+            <div class="reset-button">
+                <input type="reset" name="reset" value="Obriši sve">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

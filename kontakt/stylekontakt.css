@@ -1,0 +1,160 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+a{
+    color:crimson;
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+h2{
+    margin-top: 60px;
+    margin-bottom  :80px;
+    text-align: center;
+    font-size: 30px;
+}
+.page{
+ width: 100%;
+ height: 100vh;
+ position: absolute;
+ top: 0;
+ left: 0;
+ background-image: url("image2page/69.jpg");
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+/*width="425" height="350"*/
+
+.kontaktRegion{
+display: grid;
+grid-template: "adrese mapa"    /*adresa uzima prvi red mejlovi drugi a mapa se prostire i na prvom i drgom redu */
+               "mejlovi mapa ";
+
+grid-template-columns: 300px 1fr; /*sirina prve kolone je 300px a druge jedna frakcija tacnije ono sto je ostalo do kraja*/
+margin-left: 40px;
+width: 70vw;
+color: wheat;
+}
+.kontaktAdrese{
+    grid-area: adrese ;
+    padding-bottom: 15px ;
+    font-size: 14px;
+}
+.kontaktMejlovi{
+    grid-area: mejlovi ;
+}
+.kontaktMapa{
+    grid-area: mapa ;
+    width: 50vw;
+    height: 60vh;
+}
+
+
+
+
+
+
+.navbar{
+    width: 300px;
+    height: 100%;
+    background-color: #111111;
+    position:fixed ;
+     top : 0 ;  
+     right: -400px; /*ovo pomera ceo onaj meni van sajta i onda posle cu da ubacim da na klik ga stavi na plus 400 */
+    opacity: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20% 0 0 60%;         /*gornji levi ugao za 20 posto gore desno i dole desno 0, i dole levo 60% ,  */
+    transition: 1s cubic-bezier(1,0,0,1); /*ova funkcija cubic pravi onu foru da brzo ulazi na pocetku a na kraju sporo i da izlazi prvo sporo pa onda brzo */
+    
+    }
+    .promeni{
+        right: 0; /*ovo ce prikaze meni sa desne strane na klik znaci nece vise da bude -400 kao gore nego 0 sa desne strane */
+    
+    }
+    
+    
+    .hamburger-menu {
+       width: 35px;
+       height: 30px;
+       position: fixed;
+       top : 50px ; 
+       right: 50px ;
+       cursor: pointer; /* kad dodje kursor preko ovog hamburger menija on se pretvori iz strelice u prst */
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+    
+    }
+    .line {
+    width: 100%;
+    height: 3px;
+    background-color: crimson;
+    transition: all 0.8s;
+    }
+     .promeni .line1 {
+    
+        transform : rotateZ(-45deg) translate(-8px, 6px) ; /*rotira prvu lilniju  na hamburgeru za 45% */ 
+    
+    }
+     .promeni .line2{
+        opacity: 0;
+    }
+     .promeni .line3{
+        transform : rotate(45deg) translate(-8px,-6px) ; 
+    }
+    /*ovo line 1 2 i 3 je naprailo x i sad treba pomocu java scripta da uradim da kad pritisnim da se pojavi to x a kad pritinskem x izadje hamburger meni */
+    
+    
+    
+    
+    .nav-list {
+    text-align: right;
+    }
+    .nav-item {
+    list-style: none; 
+    margin: 25px ;
+    
+    }
+    .nav-link{
+    text-decoration: none;
+    font-size: 22px;
+    color:#eee ;
+    letter-spacing:1px ;
+    font-weight: 300;
+    text-transform: uppercase;
+    position: relative;
+    padding: 3px 0;
+    }
+    
+    .nav-link::before,.nav-link::after {
+    content: "";
+    width: 100%;
+    height: 2px; 
+    background-color: crimson;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition:  transform 0.5s;
+    }
+    .nav-link::after{
+        bottom: 0;
+        transform-origin: right;
+        
+    }.nav-link::before{
+        top:0 ; 
+        transform-origin: left; 
+    }
+    .nav-link:hover::before,.nav-link:hover::after {
+        transform: scaleX(1);  /* ovo da proverim ponovo ali ovo je hover da one linije prolaze pored slova kada  predjemo misem preko*/
+         /*ovo da pogledam ponovo kad zavrsim sve za ove linije za hover */ 
+    }
+
